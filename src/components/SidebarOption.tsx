@@ -18,7 +18,7 @@ const SidebarOption = ({ id, href }: { id: string; href: string }) => {
         isActive ? "bg-gray-300 font-bold border-black" : "border-gray-400"
       }`}
     >
-      <p>{data?.title}</p>
+      <p className="truncate">{data?.title}</p>
     </Link>
   );
 };
