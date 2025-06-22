@@ -8,16 +8,15 @@ import { db } from "../../firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 
 const Document = ({ id }: { id: string }) => {
-    const [data, loading, error] = useDocumentData(doc(db, "documents", id));  const [input, setInput] = useState("");
+  const [data, loading, error] = useDocumentData(doc(db, "documents", id));
+  const [input, setInput] = useState("");
   const [isUpdating, startTransition] = useTransition();
- 
+//   const isOwner = useOwner();
   useEffect(() => {
-    if(data){
-        setInput(data.title);
+    if (data) {
+      setInput(data.title);
     }
-
-  }, [data])
-
+  }, [data]);
 
   const updateTitle = (e: FormEvent) => {
     e.preventDefault();
