@@ -94,7 +94,6 @@ const Sidebar = () => {
             ))}
           </>
         )}
-      </div>
       {/* List.. */}
 
       {/* Shared with me */}
@@ -108,6 +107,7 @@ const Sidebar = () => {
           ))}
         </>
       )}
+      </div>
       {/* List... */}
     </>
   );
